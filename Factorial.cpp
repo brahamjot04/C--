@@ -21,13 +21,14 @@ public:
 
 int main()
 {
-    int n, a = 1;
-    int i = 1;
+    int n;
 
     cout << "Enter the number to find its factorial: ";
     cin >> n;
+
     Factorial f;
     int res = f.fac(n);
     cout << "Factorial of " << n << " is: " << res << endl;
+
     return 0;
 }
