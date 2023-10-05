@@ -4,24 +4,27 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cout << "Enter the number to check whether it is prime or not: ";
+    int n, flag = 0;
+    cout << "Enter the number to check: ";
     cin >> n;
     for (int i = 2; i <= (n / 2); i++)
     {
-        if (n % i == 0)
+        if (i % n == 0)
         {
-            cout << "Not prime" << endl;
-            break;
+            flag = 1;
         }
         else
         {
-            if (n == 2 || n == 3)
-            {
-                cout << "Prime" << endl;
-                break;
-            }
+            flag = 0;
         }
+    }
+    if (flag == 0)
+    {
+        cout << n << " is a Prime number" << endl;
+    }
+    else
+    {
+        cout << n << " is not a Prime Number" << endl;
     }
     return 0;
 }
